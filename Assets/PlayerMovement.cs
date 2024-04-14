@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    Rigidbody2D rb;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public float speed = 5f; // Velocidad de movimiento del jugador
-
+    
     // Método Update se llama una vez por frame
     void Update()
     {
@@ -20,9 +21,9 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         // Calcular el vector de movimiento
-        Vector2 movement = new Vector2(horizontalInput, verticalInput) * speed * Time.deltaTime;
-
+        Vector2 movement = new Vector2(horizontalInput, verticalInput);
+        rb.velocity = movement * speed; 
         // Mover el objeto utilizando la física del motor de Unity
-        transform.Translate(movement);
+        
     }
 }
