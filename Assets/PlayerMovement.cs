@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+
+    public float speed = 5f; // Velocidad de movimiento del jugador
     Rigidbody2D rb;
+
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    public float speed = 5f; // Velocidad de movimiento del jugador
     
     // Método Update se llama una vez por frame
     void Update()
