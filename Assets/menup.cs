@@ -19,7 +19,7 @@ public class menup : MonoBehaviour
 
     public void cambiasescena()
     {
-        SceneManager.LoadScene("Escena");
+        SceneManager.LoadScene("Juego");
     }
 
     public void salir(){
