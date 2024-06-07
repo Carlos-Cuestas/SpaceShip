@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class salirm : MonoBehaviour
+
+public class menup : MonoBehaviour
 {
     // Start is called before the first frame update
+    public string Scena = "";
     void Start()
     {
         
@@ -14,5 +16,14 @@ public class salirm : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void cambiasescena()
+    {
+        SceneManager.LoadScene(Scena);
+    }
+
+    public void salir(){
+        Application.Quit();
     }
 }
